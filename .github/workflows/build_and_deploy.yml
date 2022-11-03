@@ -29,7 +29,9 @@ jobs:
         with:
           cmd: export
       - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
+        run: |
+          cd ./out
+          echo > .nojekyll
       - name: Deploy🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
