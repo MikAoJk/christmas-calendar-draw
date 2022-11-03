@@ -1,4 +1,5 @@
 ## Christmas calendar draw
+A simple website, where you draw winners of the Christmas calendar
 
 ## Technologies used
 * NPM
@@ -26,4 +27,4 @@ yarn dev
 This project is maintained by [CODEOWNERS](CODEOWNERS)
 
 Questions and/or feature requests? 
-Please create an [issue](https://github.com/navikt/christmas-calendar-draw/issues)
+Please create an [issue](https://github.com/MikAoJk/christmas-calendar-draw/issues)
