@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_PATH: /christmas-calendar-draw
+      NODE_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -16,18 +17,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install packages
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install --immutable
+      - name: Install yarn
+        run: npm install -g yarn
       - name: Build
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: build
+        run: yarn install --immutable
       - name: Export static files
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: export
+        run: yarn export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
       - name: Deploy🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
