@@ -1,3 +1,5 @@
+[![build and deploy main branch](https://github.com/MikAoJk/christmas-calendar-draw/actions/workflows/build_and_deploy.yml/badge.svg)](https://github.com/MikAoJk/christmas-calendar-draw/actions/workflows/build_and_deploy.yml)
+
 ## Christmas calendar draw
 A simple website, where you draw winners of the Christmas calendar
 
