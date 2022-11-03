@@ -19,15 +19,15 @@ jobs:
       - name: Install packages
         uses: borales/actions-yarn@v3.0.0
         with:
-        cmd: install --immutable
+          cmd: install --immutable
       - name: Build
         uses: borales/actions-yarn@v3.0.0
         with:
-        cmd: build
+          cmd: build
       - name: Export static files
         uses: borales/actions-yarn@v3.0.0
         with:
-        cmd: export
+          cmd: export
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
       - name: Deploy🚀
