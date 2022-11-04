@@ -16,7 +16,7 @@ const PrevWinners = () => {
                 <tr>
                     <td>Unknown</td>
                     <td>1</td>
-                    <td>User1</td>
+                    <td>money</td>
                 </tr>
                 </tbody>
             </table>
