@@ -27,8 +27,8 @@ const Wheel = (wheelProps: WheelProps) => {
     const downTime = wheelProps.participants.length * 1000
     let spinStart = 0
     let frames = 0
-    const centerX = 300
-    const centerY = 300
+    const centerX = 325
+    const centerY = 295
     useEffect(() => {
         wheelInit()
         setTimeout(() => {
@@ -45,8 +45,8 @@ const Wheel = (wheelProps: WheelProps) => {
         console.log(navigator)
         if (navigator.userAgent.indexOf('MSIE') !== -1) {
             canvas = document.createElement('canvas') as HTMLCanvasElement | null;
-            canvas?.setAttribute('width', String(1000))
-            canvas?.setAttribute('height', String(600))
+            canvas?.setAttribute('width', String(620))
+            canvas?.setAttribute('height', String(590))
             canvas?.setAttribute('id', 'canvas')
             // @ts-ignore
             document?.getElementById('wheel')?.appendChild(canvas)
@@ -193,14 +193,14 @@ const Wheel = (wheelProps: WheelProps) => {
         isStarted && ctx.fillText(currentParticipant, centerX + 10, centerY + size + 50)
     }
     const clear = () => {
-        canvasContext.clearRect(0, 0, 630, 600)
+        canvasContext.clearRect(0, 0, 620, 590)
     }
     return (
         <div id='wheel'>
             <canvas
                 id='canvas'
-                width='630'
-                height='600'
+                width='620'
+                height='590'
                 style={{
                     pointerEvents: isFinished ? 'none' : 'auto'
                 }}
