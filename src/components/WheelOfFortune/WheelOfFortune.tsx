@@ -81,15 +81,11 @@ const WheelOfFortune = () => {
         return participants;
     }
 
-    const shuffeledParticipant = shuffleParticipant(participants)
-    console.log(shuffeledParticipant)
-
-
     return (
         <div className={styles.main}>
             <PrevWinners/>
             {winner && <h3>Todays winner is: {winner}</h3>}
-            <Wheel participants={shuffeledParticipant}
+            <Wheel participants={shuffleParticipant(participants)}
                    onFinished={winnerHandler}/>
         </div>
     )
