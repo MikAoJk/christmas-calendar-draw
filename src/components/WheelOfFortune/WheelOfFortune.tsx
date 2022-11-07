@@ -20,7 +20,7 @@ const WheelOfFortune = () => {
         },
             {
                 name: 'ola',
-                color: '#F0CF50'
+                color: '#1f8314'
             },
             {
                 name: 'jonny',
@@ -28,11 +28,11 @@ const WheelOfFortune = () => {
             },
             {
                 name: 'pål',
-                color: '#3DA5E0'
+                color: '#a34508'
             },
             {
                 name: 'viggo',
-                color: '#F0CF50'
+                color: '#530dcb'
             },
             {
                 name: 'espen',
@@ -44,7 +44,7 @@ const WheelOfFortune = () => {
             },
             {
                 name: 'hans',
-                color: '#815CD1'
+                color: '#26303f'
             },
             {
                 name: 'vegard',
@@ -56,7 +56,7 @@ const WheelOfFortune = () => {
             },
             {
                 name: 'øyvind',
-                color: '#EC3F3F'
+                color: '#a20ab4'
             },
             {
                 name: 'ronny',
@@ -64,11 +64,32 @@ const WheelOfFortune = () => {
             }
         ]
 
+    const shuffleParticipant = (participants: Participants[]) => {
+        let currentIndex = participants.length, randomIndex;
+
+        while (currentIndex != 0) {
+
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [participants[currentIndex], participants[randomIndex]] = [
+                participants[randomIndex], participants[currentIndex]];
+        }
+
+        return participants;
+    }
+
+    const shuffeledParticipant = shuffleParticipant(participants)
+    console.log(shuffeledParticipant)
+
+
     return (
         <div className={styles.main}>
             <PrevWinners/>
             {winner && <h3>Todays winner is: {winner}</h3>}
-            <Wheel participants={participants}
+            <Wheel participants={shuffeledParticipant}
                    onFinished={winnerHandler}/>
         </div>
     )

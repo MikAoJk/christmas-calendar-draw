@@ -41,7 +41,6 @@ const Wheel = (wheelProps: WheelProps) => {
 
     const initCanvas = () => {
         let canvas = document.getElementById('canvas')
-        console.log(navigator)
         if (navigator.userAgent.indexOf('MSIE') !== -1) {
             canvas = document.createElement('canvas') as HTMLCanvasElement;
             canvas?.setAttribute('width', String(610))
