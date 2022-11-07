@@ -65,7 +65,7 @@ const WheelOfFortune = () => {
         ]
 
     return (
-        <div className={styles.container}>
+        <div className={styles.main}>
             <PrevWinners/>
             {winner && <h3>Todays winner is: {winner}</h3>}
             <Wheel participants={participants}

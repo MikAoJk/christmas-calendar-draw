@@ -193,14 +193,14 @@ const Wheel = (wheelProps: WheelProps) => {
         isStarted && ctx.fillText(currentParticipant, centerX + 10, centerY + size + 50)
     }
     const clear = () => {
-        canvasContext.clearRect(0, 0, 1000, 800)
+        canvasContext.clearRect(0, 0, 630, 600)
     }
     return (
-        <div id='wheel' className={styles.main}>
+        <div id='wheel'>
             <canvas
                 id='canvas'
-                width='1000'
-                height='800'
+                width='630'
+                height='600'
                 style={{
                     pointerEvents: isFinished ? 'none' : 'auto'
                 }}
