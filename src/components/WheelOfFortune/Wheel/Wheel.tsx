@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import {Participants} from "../WheelOfFortune";
-import styles from "../../../styles/Home.module.css";
 
 
 interface WheelProps {
@@ -25,10 +24,10 @@ const Wheel = (wheelProps: WheelProps) => {
     let maxSpeed = Math.PI / wheelProps.participants.length
     const upTime = wheelProps.participants.length * 100
     const downTime = wheelProps.participants.length * 1000
-    let spinStart = 0
+    const spinStart = new Date().getTime()
     let frames = 0
-    const centerX = 325
-    const centerY = 295
+    const centerX = 300
+    const centerY = 300
     useEffect(() => {
         wheelInit()
         setTimeout(() => {
@@ -44,16 +43,14 @@ const Wheel = (wheelProps: WheelProps) => {
         let canvas = document.getElementById('canvas')
         console.log(navigator)
         if (navigator.userAgent.indexOf('MSIE') !== -1) {
-            canvas = document.createElement('canvas') as HTMLCanvasElement | null;
-            canvas?.setAttribute('width', String(620))
+            canvas = document.createElement('canvas') as HTMLCanvasElement;
+            canvas?.setAttribute('width', String(610))
             canvas?.setAttribute('height', String(590))
             canvas?.setAttribute('id', 'canvas')
-            // @ts-ignore
             document?.getElementById('wheel')?.appendChild(canvas)
         }
         canvas!.addEventListener('click', spin, false)
-        // @ts-ignore
-        canvasContext = canvas?.getContext('2d')
+        canvasContext = (canvas as HTMLCanvasElement).getContext('2d')
     }
 
     const getRandomIntInclusive = () => {
@@ -63,7 +60,6 @@ const Wheel = (wheelProps: WheelProps) => {
     const spin = () => {
         isStarted = true
         if (timerHandle === 0) {
-            spinStart = new Date().getTime()
             maxSpeed = (Math.PI + getRandomIntInclusive()) / wheelProps.participants.length
             frames = 0
             timerHandle = setInterval(onTimerTick, timerDelay)
@@ -193,13 +189,13 @@ const Wheel = (wheelProps: WheelProps) => {
         isStarted && ctx.fillText(currentParticipant, centerX + 10, centerY + size + 50)
     }
     const clear = () => {
-        canvasContext.clearRect(0, 0, 620, 590)
+        canvasContext.clearRect(0, 0, 610, 590)
     }
     return (
         <div id='wheel'>
             <canvas
                 id='canvas'
-                width='620'
+                width='610'
                 height='590'
                 style={{
                     pointerEvents: isFinished ? 'none' : 'auto'
