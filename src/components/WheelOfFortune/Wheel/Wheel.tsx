@@ -12,7 +12,7 @@ const Wheel = (wheelProps: WheelProps) => {
     const contrastColor = 'white'
     const primaryColor = 'black'
     const fontFamily = 'proxima-nova'
-    const size = 290
+    const size = 230
     let currentParticipant = ''
     let isStarted = false
     const [isFinished, setFinished] = useState(false)
@@ -43,8 +43,8 @@ const Wheel = (wheelProps: WheelProps) => {
         let canvas = document.getElementById('canvas')
         if (navigator.userAgent.indexOf('MSIE') !== -1) {
             canvas = document.createElement('canvas') as HTMLCanvasElement;
-            canvas?.setAttribute('width', String(610))
-            canvas?.setAttribute('height', String(590))
+            canvas?.setAttribute('width', String(500))
+            canvas?.setAttribute('height', String(500))
             canvas?.setAttribute('id', 'canvas')
             document?.getElementById('wheel')?.appendChild(canvas)
         }
@@ -188,7 +188,7 @@ const Wheel = (wheelProps: WheelProps) => {
         isStarted && ctx.fillText(currentParticipant, centerX + 10, centerY + size + 50)
     }
     const clear = () => {
-        canvasContext.clearRect(0, 0, 610, 590)
+        canvasContext.clearRect(0, 0, 500, 500)
     }
     return (
         <div id='wheel'>
