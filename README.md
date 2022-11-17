@@ -4,16 +4,22 @@
 A simple website, where you draw winners of the Christmas calendar
 
 ## Technologies used
-* NPM
+* Yarn
 * Next.js
 * TypeScript
 
 ## Getting Started
+### Prerequisites
+Make sure you have yarn installed
+See [yarn install](https://yarnpkg.com/getting-started/install) on how to install it locally
+You can check which yarn version you have installed using this command:
+`yarn --version`
+
 ### Running the application locally
 
 Run the development server with this command:
 ```bash
-npm run dev
+yarn  dev
 ```
 
 ## Contact
