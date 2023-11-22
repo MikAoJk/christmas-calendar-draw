@@ -84,9 +84,9 @@ const WheelOfFortune = () => {
     return (
         <div className={styles.main}>
             <PrevWinners/>
-            {winner && <h3>Todays winner is: {winner}🥇</h3>}
             <Wheel participants={shuffleParticipant(participants)}
                    onFinished={winnerHandler}/>
+            {winner && <h3>Todays winner is: {winner}🥇</h3>}
         </div>
     )
 
