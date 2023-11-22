@@ -1,4 +1,4 @@
-import styles from "WheelOfFortune.tsx.module.css";
+import styles from "WheelOfFortune.module.css";
 
 import React, {useState} from 'react'
 import Wheel from "./Wheel/Wheel";
