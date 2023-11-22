@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.css";
 const PrevWinners = () => {
 
     return (
-        <div className={styles.center}>
+        <div className={styles.main}>
             <table>
                 <thead>
                 <tr>
