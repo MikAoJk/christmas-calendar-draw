@@ -1,5 +1,7 @@
 .main {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 30em;
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
