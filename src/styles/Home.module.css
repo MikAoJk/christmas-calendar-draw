@@ -5,3 +5,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 30em;
+}
