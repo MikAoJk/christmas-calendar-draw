@@ -12,7 +12,7 @@ const Wheel = (wheelProps: WheelProps) => {
     const contrastColor = 'white'
     const primaryColor = 'black'
     const fontFamily = 'proxima-nova'
-    const size = 220
+    const size = 200
     let currentParticipant = ''
     let isStarted = false
     const [isFinished, setFinished] = useState(false)
