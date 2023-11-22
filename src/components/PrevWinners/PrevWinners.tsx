@@ -1,9 +1,6 @@
-import styles from "../../styles/Home.module.css";
-
 const PrevWinners = () => {
 
     return (
-        <div className={styles.main}>
             <table>
                 <thead>
                 <tr>
@@ -20,7 +17,6 @@ const PrevWinners = () => {
                 </tr>
                 </tbody>
             </table>
-        </div>
     )
 
 }
