@@ -26,8 +26,8 @@ const Wheel = (wheelProps: WheelProps) => {
     const downTime = wheelProps.participants.length * 1000
     const spinStart = new Date().getTime()
     let frames = 0
-    const centerX = 280
-    const centerY = 280
+    const centerX = 240
+    const centerY = 240
     useEffect(() => {
         wheelInit()
         setTimeout(() => {

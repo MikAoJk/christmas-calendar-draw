@@ -3,8 +3,7 @@ import styles from "./PrevWinners.module.css";
 const PrevWinners = () => {
 
     return (
-        <div className={styles.main}>
-            <table>
+            <table className={styles.center}>
                 <thead>
                 <tr>
                     <th>Winner</th>
@@ -20,7 +19,6 @@ const PrevWinners = () => {
                 </tr>
                 </tbody>
             </table>
-        </div>
     )
 
 }
