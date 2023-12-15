@@ -26,8 +26,8 @@ const Wheel = (wheelProps: WheelProps) => {
     const downTime = wheelProps.participants.length * 1000
     const spinStart = new Date().getTime()
     let frames = 0
-    const centerX = 200
-    const centerY = 200
+    const centerX = 185
+    const centerY = 185
     useEffect(() => {
         wheelInit()
         setTimeout(() => {
@@ -194,8 +194,8 @@ const Wheel = (wheelProps: WheelProps) => {
         <div id='wheel'>
             <canvas
                 id='canvas'
-                width='400'
-                height='400'
+                width='370'
+                height='370'
                 style={{
                     pointerEvents: isFinished ? 'none' : 'auto',
                 }}

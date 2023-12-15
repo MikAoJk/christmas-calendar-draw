@@ -2,7 +2,7 @@ const PrevWinners = () => {
 
     return (
         <div className="relative overflow-x-auto">
-            <table className="w-full text-xl md:text-sm text-left rtl:text-right ">
+            <table className="w-full text-xl text-left rtl:text-right">
                 <thead className="text-m uppercase">
                 <tr>
                     <th scope="col" className="px-6 py-3">Winner</th>

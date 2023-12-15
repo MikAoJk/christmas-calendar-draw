@@ -25,7 +25,7 @@ yarn
 
 Run the development server with this command:
 ```bash
-yarn  dev
+yarn dev
 ```
 
 ## Contact
