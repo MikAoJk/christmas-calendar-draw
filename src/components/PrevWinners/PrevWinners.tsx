@@ -1,24 +1,24 @@
-import styles from "./PrevWinners.module.css";
-
 const PrevWinners = () => {
 
     return (
-            <table className={styles.center}>
-                <thead>
+        <div className="relative overflow-x-auto">
+            <table className="w-full text-sm text-left rtl:text-right ">
+                <thead className="text-m uppercase">
                 <tr>
-                    <th>Winner</th>
-                    <th>Day</th>
-                    <th>Price</th>
+                    <th scope="col" className="px-6 py-3">Winner</th>
+                    <th scope="col" className="px-6 py-3">Day</th>
+                    <th scope="col" className="px-6 py-3">Price</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Unknown</td>
-                    <td>1</td>
-                    <td>money</td>
+                <tr className="border-b dark:border-gray-700">
+                    <td className="px-6 py-4">Unknown</td>
+                    <td className="px-6 py-4">1</td>
+                    <td className="px-6 py-4">money</td>
                 </tr>
                 </tbody>
             </table>
+        </div>
     )
 
 }

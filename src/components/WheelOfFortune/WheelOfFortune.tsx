@@ -1,4 +1,4 @@
-import styles from "./WheelOfFortune.module.css";
+'use client';
 
 import React, {useState} from 'react'
 import Wheel from "./Wheel/Wheel";
@@ -82,10 +82,10 @@ const WheelOfFortune = () => {
     }
 
     return (
-        <div className={styles.main}>
+        <div>
             <PrevWinners/>
-            {!winner && <h3>Todays winner is:</h3>}
-            {winner && <h3>Todays winner is: {winner}🥇</h3>}
+            {!winner && <h3 className="p-2">Todays winner is:</h3>}
+            {winner && <h3 className="p-2">Todays winner is: {winner}🥇</h3>}
             <Wheel participants={shuffleParticipant(participants)}
                    onFinished={winnerHandler}/>
         </div>

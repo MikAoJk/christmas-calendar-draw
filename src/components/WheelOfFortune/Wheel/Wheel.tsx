@@ -188,7 +188,7 @@ const Wheel = (wheelProps: WheelProps) => {
         isStarted && ctx.fillText(currentParticipant, centerX + 10, centerY + size + 50)
     }
     const clear = () => {
-        canvasContext.clearRect(0, 0, 530, 530)
+        canvasContext.clearRect(0, 0, 50, 530)
     }
     return (
         <div id='wheel'>
